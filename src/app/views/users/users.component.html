@@ -1,1 +1,8 @@
-<p>users works!</p>
+<div class="users">
+  <mat-card class="user" *ngFor="let user of users"
+    class="user mat-elevation-z3">
+    <mat-card-title class="title"> {{user.name}} </mat-card-title>
+    <mat-card-subtitle class="subtitle"> Idade: {{user.age}} anos </mat-card-subtitle>
+    <img src="{{user.srcImg}}" alt="{{user.name}}">
+  </mat-card>
+</div>

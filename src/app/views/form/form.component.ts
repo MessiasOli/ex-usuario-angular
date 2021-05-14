@@ -19,13 +19,16 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userService.showUsers()
   }
 
   createUser(): void {
     console.log('this.user :>> ', );
     let user: User = { name: this.name , age: this.age, srcImg: this.srcImg}
     this.userService.addUser(user)
+    this.name = ''
+    this.age = 0
+    this.srcImg = ''
+
   }
 
   cancel(): void {

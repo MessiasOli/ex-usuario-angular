@@ -1,0 +1,15 @@
+.user > img {
+  height: 250px;
+  width: 250px;
+}
+
+.users {
+  display: flex;
+}
+
+.user {
+  margin-right: 10 px;
+  margin-bottom: 10 px;
+  max-width: 260px;
+  min-width: 255px;
+}

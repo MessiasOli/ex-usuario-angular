@@ -12,13 +12,13 @@ export class UserService {
       id: 1,
       name: 'Marcelo',
       age: 28,
-      srcImg: 'https://thispersondoesnotexist.com/image'
+      srcImg: 'https://engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia360-4.png'
     },
     {
       id: 2,
       name: 'Marcos',
       age: 25,
-      srcImg: 'https://thispersondoesnotexist.com/image'
+      srcImg: 'https://static.imasters.com.br/wp-content/uploads/2019/02/20112325/person05-300x300.jpg'
     },
   ]
 
@@ -40,7 +40,7 @@ export class UserService {
     console.log('this.userList :>> ', this.userList);
   }
 
-  showUsers(): User[] {
+  getUsers(): User[] {
     return this.userList
   }
 }
