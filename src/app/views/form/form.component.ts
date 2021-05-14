@@ -1,3 +1,4 @@
+import { User } from './../../services/users/user.model';
 import { UserService } from './../../services/users/user.service';
 
 import { Component, OnInit } from '@angular/core';
@@ -10,13 +11,21 @@ import { Router } from '@angular/router'
 })
 export class FormComponent implements OnInit {
 
-  constructor(private router: Router, private userService: UserService) { }
+  name: string = ''
+  age: any = ''
+  srcImg: string = ''
+
+  constructor(private router: Router, private userService: UserService) { 
+  }
 
   ngOnInit(): void {
     this.userService.showUsers()
   }
 
   createUser(): void {
+    console.log('this.user :>> ', );
+    let user: User = { name: this.name , age: this.age, srcImg: this.srcImg}
+    this.userService.addUser(user)
   }
 
   cancel(): void {

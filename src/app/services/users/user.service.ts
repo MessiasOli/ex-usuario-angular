@@ -15,7 +15,7 @@ export class UserService {
       srcImg: 'https://thispersondoesnotexist.com/image'
     },
     {
-      id: 1,
+      id: 2,
       name: 'Marcos',
       age: 25,
       srcImg: 'https://thispersondoesnotexist.com/image'
@@ -23,11 +23,12 @@ export class UserService {
   ]
 
   hasUser(name: string): boolean {
-    let user = this.userList.find(u => u.name == name)
-    if(user != null){
-      return true
+    let user = this.userList.filter(u => u.name == name)
+    console.log('tem usuário user :>> ', user);
+    if(user.length > 0){
+      return false
     }
-    return false
+    return true
   }
 
   addUser(user : User): void {
@@ -36,6 +37,7 @@ export class UserService {
     }else{
       alert("Usuário já cadastrado!")
     }
+    console.log('this.userList :>> ', this.userList);
   }
 
   showUsers(): User[] {
