@@ -3,13 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import { MenuComponent } from './menu/menu.component'
+import { FormComponent } from './views/form/form.component';
+import { MenuComponent } from './template/menu/menu.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './template/header/header.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './template/footer/footer.component';
+import { HomeComponent } from './views/home/home.component';
+import { UsersComponent } from './views/users/users.component';
+
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+
+
 
 @NgModule({
   declarations: [
@@ -18,12 +27,18 @@ import { FooterComponent } from './footer/footer.component'
     MenuComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

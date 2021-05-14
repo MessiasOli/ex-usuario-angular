@@ -6,10 +6,10 @@ header>h1{
   text-align: center;
 }
 
-.content{
+/* .content{
   display: flex;
   justify-content: space-between;
-}
+} */
 
 footer>h4{
   position: relative;
