@@ -13,13 +13,17 @@ export class FormComponent implements OnInit {
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.showUsers()
   }
 
-  // criarUsuario(): void {
-  // }
+  createUser(): void {
+  }
+
+  cancel(): void {
+    this.router.navigate(['/'])
+  }
 
   navToUsers(): void {
     this.router.navigate(['/users'])
   }
-
 }
